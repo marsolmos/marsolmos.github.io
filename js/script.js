@@ -1,5 +1,5 @@
-// const a = document.querySelectorAll("pre a");
-// [...a].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
+const buttons = document.querySelectorAll(".social-buttons a");
+buttons[0].parentNode.removeChild(buttons[0])
 
 const spans = document.querySelectorAll('h1 span')
 spans.forEach(span => span.addEventListener('mouseover', function(e) {
