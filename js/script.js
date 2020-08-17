@@ -25,11 +25,12 @@ t1.fromTo(htmlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ea
 
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
-	triggerElement: '.skills',
+	triggerElement: '#dotimg',
 	triggerHook: 0
 })
 .setTween(t1)
 .addTo(controller)
+
 
 const showRequiredCategory = event => {
 	const getId = event.id
@@ -39,7 +40,6 @@ const showRequiredCategory = event => {
 			links[i].classList.remove('active')
 		}
 	}
-
 
 	event.classList.add('active')
 	const getCategory = document.querySelector('.category-'+getId)
