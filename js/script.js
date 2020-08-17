@@ -1,3 +1,6 @@
+// const a = document.querySelectorAll("pre a");
+// [...a].forEach(el => el.textContent = el.textContent.replace(/^\n/,''));
+
 const spans = document.querySelectorAll('h1 span')
 spans.forEach(span => span.addEventListener('mouseover', function(e) {
 	span.classList.add('animated', 'rubberBand')
@@ -18,7 +21,7 @@ t1.fromTo(htmlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ea
 	.fromTo(cssBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(95% - 6px)', ease: Power4.easeOut})
 	.fromTo(jsBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(75% - 6px)', ease: Power4.easeOut})
 	.fromTo(reactBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
-	
+
 
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
@@ -36,8 +39,8 @@ const showRequiredCategory = event => {
 			links[i].classList.remove('active')
 		}
 	}
-	
-	
+
+
 	event.classList.add('active')
 	const getCategory = document.querySelector('.category-'+getId)
 	const categories = document.querySelectorAll('div[class^= "category-"]')

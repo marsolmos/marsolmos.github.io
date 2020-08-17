@@ -6,7 +6,7 @@
 }
 
 html {
-	scroll-behavior: smoot;
+	scroll-behavior: smooth;
 }
 
 .container {
@@ -302,28 +302,54 @@ showCategory {
 	margin-top: 50px;
 }
 
-form input,
-form textarea {
-	display: block;
-	width: 500px;
-	padding: 20px;
-	background-color: #252627;
-	border: 3px solid #707070;
-	margin: 20px 0;
-	outline: none;
-	font-size: 1.2rem;
-	color: #fff;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	transform: translateX(-50%);
+.container-social-buttons div{
+  padding: 0;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0;
+  /* border: 1px solid #ddd; */
 }
 
-form input:last-child {
-	width: 150px;
-	background-color:#ED5565;
-	border: none;
-	cursor: pointer;
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg,#ED5565,#30336b);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg,#ED5565,#30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
 }
 
 footer hr {
