@@ -14,12 +14,14 @@
 	<div class="container navbar">
 		<header>
 			<div class="lgo">
-				<h1>Portfolio</h1>
+				<h1>Personal Portfolio</h1>
 			</div>
 
 			<nav>
 				<ul>
 					<li><a href="#about">about me</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#education">education</a></li>
 					<li><a href="#skills">skills</a></li>
 					<li><a href="#projects">my projects</a></li>
 				</ul>
@@ -79,6 +81,14 @@
   		<img src="img/dotted-shape.png" alt="" id="dotimg">
 	 </div>
 
+   <div class="container experience" id="experience">
+     <h1>Experience</h1>
+   </div>
+
+   <div class="container education" id="education">
+     <h1>Education</h1>
+   </div>
+
     <div class="container skills" id="skills">
 		<h1>Skills</h1>
 		<p class="skills-info">Lorem ipsum sit dormet Lorem ipsum sit dormet Lorem ipsum sit dormet Lorem ipsum sit dormet</p>
@@ -124,22 +134,22 @@
 			<button id="others" onclick="showRequiredCategory(this)">Others</button>
 		</div>
 		<div class="category-datascience showCategory">
-			<a href=""><img src="img/1.png"><a>
-			<a href=""><img src="img/2.png"><a>
-			<a href=""><img src="img/3.png"><a>
-			<a href=""><img src="img/2.png"><a>
+			<a href="projects/project_1.html"><img src="img/1.png"><a>
+			<a href="projects/project_1.html"><img src="img/2.png"><a>
+			<a href="projects/project_1.html"><img src="img/3.png"><a>
+			<a href="projects/project_1.html"><img src="img/2.png"><a>
 			<a href=""><img src="img/3.png"><a>
 		</div>
 		<div class="category-cloud hideCategory">
-			<a href=""><img src="img/1.png"><a>
-			<a href=""><img src="img/2.png"><a>
-			<a href=""><img src="img/3.png"><a>
+			<a href="projects/project_1.html"><img src="img/1.png"><a>
+			<a href="projects/project_1.html"><img src="img/2.png"><a>
+			<a href="projects/project_1.html"><img src="img/3.png"><a>
 		</div>
 		<div class="category-others hideCategory">
-			<a href=""><img src="img/1.png"><a>
-			<a href=""><img src="img/2.png"><a>
-			<a href=""><img src="img/3.png"><a>
-			<a href=""><img src="img/2.png"><a>
+			<a href="projects/project_1.html"><img src="img/1.png"><a>
+			<a href="projects/project_1.html"><img src="img/2.png"><a>
+			<a href="projects/project_1.html"><img src="img/3.png"><a>
+			<a href="projects/project_1.html"><img src="img/2.png"><a>
 		</div>
 	</div>
 
@@ -147,8 +157,16 @@
     <h1>Contact</h1>
     <div class="container-social-buttons">
       <div class="social-buttons">
-        <a href="#"><i class="far fa-envelope"></i></a>
-        <a href="#"><i class="fas fa-phone-alt"></i></a>
+        <a class="tooltip" href="#contact">
+          <i class="far fa-envelope">
+            <span class="tooltiptext">Email: </span>
+          </i>
+        </a>
+        <a class="tooltip" href="#contact">
+          <i class="fas fa-phone-alt">
+            <span class="tooltiptext">Phone number: </span>
+          </i>
+        </a>
         <a href="https://linkedin.com/in/mariano-sanchez-olmos"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/marsolmos"><i class="fab fa-github"></i></a>
         <a href="https://twitter.com/marsolmos_"><i class="fab fa-twitter"></i></a>
