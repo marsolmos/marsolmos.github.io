@@ -24,6 +24,13 @@ html {
   margin-right: 30px;
 }
 
+.container-skills {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    max-height: 75%;
+}
+
 .left-container {
     flex: 0 1 50%;
     min-height: 100%;
@@ -33,11 +40,18 @@ html {
     border-color: transparent white transparent transparent;
     padding: .5em;
 }
+
+.left-container-skills {
+    margin-left: 40px;
+    border-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
 .right-container {
     flex: 0 1 50%;
-    /* flex-direction: column; */
     display: flex;
-    height: 100%;
+    min-height: 100%;
     max-width: 50%;
     flex-wrap: wrap;
     align-items: center;
@@ -46,7 +60,16 @@ html {
 
 .right-container-experience {
     margin-left: 40px;
+    /* align-items: center;
+    justify-content: left; */
 }
+
+.right-container-skills {
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
 .half-containers {
     flex: 0 0 100%;
     max-height: 50%;
@@ -229,9 +252,9 @@ span.m-left {
 	transform: translateX(calc(-100% + 100px));
 }
 
-.experience {
+/* .experience {
 	height: 75vh;
-}
+} */
 
 .experience h2 {
   color: #a9a9b3;
@@ -262,9 +285,9 @@ span.m-left {
 	height: 75vh;
 }
 
-.skills {
+/* .skills {
 	height: 75vh;
-}
+} */
 
 .experience h1,
 .skills h1,
@@ -327,11 +350,83 @@ div[class^='bar-'] {
 }
 
 .bar-python,
+.bar-sql,
 .bar-tf,
 .bar-keras,
 .bar-web-design {
 	width: calc(0 - 6px);
 }
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #000;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #48CFAD;
+  background-color: #48CFAD;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #000;
+}
+[type="checkbox"]:disabled + label {
+  color: #BEBEBE;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #48CFAD!important;
+}
+
 
 .projects-category button {
 	text-transform: capitalize;
