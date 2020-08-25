@@ -41,7 +41,7 @@ html {
     padding: .5em;
 }
 
-.left-container-skills {
+.left-container-checkbox {
     margin-left: 40px;
     border-color: transparent;
     align-items: center;
@@ -64,7 +64,7 @@ html {
     justify-content: left; */
 }
 
-.right-container-skills {
+.right-container-checkbox {
     margin-left: 40px;
     align-items: center;
     justify-content: center;
@@ -281,9 +281,9 @@ span.m-left {
   margin-bottom: 30px;
 }
 
-.education {
+/* .education {
 	height: 75vh;
-}
+} */
 
 /* .skills {
 	height: 75vh;
@@ -569,6 +569,18 @@ showCategory {
   background: linear-gradient(45deg, #ED5565 0%, #30336b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.project-detail h2 {
+	font-size: 3rem;
+	z-index: 0;
+  color: #BEBEBE;
+}
+
+.project-detail h3 {
+	font-size: 2rem;
+	z-index: 0;
+  color: #BEBEBE;
 }
 
 footer hr {
