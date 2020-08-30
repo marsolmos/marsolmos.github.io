@@ -427,7 +427,6 @@ label:hover:before {
   border: 2px solid #48CFAD!important;
 }
 
-
 .projects-category button {
 	text-transform: capitalize;
 	border: 3px solid #ED5565;
@@ -527,37 +526,40 @@ showCategory {
   transform: scale(2.2);
 }
 
-/*  */
 /* Tooltip container */
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 320px;
   bottom: 140%;
   left: 50%;
   margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
   background-color: #464646;
   color: #ED5565;
   text-align: center;
+  text-transform: lowercase;
   padding: 5px 0;
   border-radius: 6px;
 
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 1;
 }
-/*  */
 
 .project-detail {
 	height: 75vh;
