@@ -26,9 +26,9 @@ t1.fromTo(pythonBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', 
 
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
-	// triggerElement: '#dotimg',
 	triggerElement: '.skills',
-	triggerHook: 0
+	triggerHook: 0,
+	offset: -200,
 })
 .setTween(t1)
 .addTo(controller)
