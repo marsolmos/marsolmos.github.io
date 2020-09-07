@@ -605,9 +605,9 @@ showCategory {
   opacity: 1;
 }
 
-.project-detail {
+/* .project-detail {
 	height: 75vh;
-}
+} */
 
 .project-detail h1 {
 	font-size: 10rem;
@@ -627,6 +627,16 @@ showCategory {
 	font-size: 2rem;
 	z-index: 0;
   color: #BEBEBE;
+  margin-top: 5%;
+}
+
+.project-detail p {
+	font-size: 1rem;
+	z-index: 0;
+  color: #BEBEBE;
+  margin-top: 2%;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 footer hr {
