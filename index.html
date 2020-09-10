@@ -11,18 +11,18 @@
   </head>
   <body>
 
-  <div class="container navbar">
+  <div class="navbar">
 		<header>
-			<div>
-				<h1>Personal Portfolio</h1>
+			<div class="logo">
+				<a href="#/"><img src="img/personal_logo.png"></img></a>
 			</div>
 
 			<nav>
-        <input type="checkbox" id="click"></input>
-        <label for="click" class="menu-btn">
+        <input type="checkbox" id="closeIcon"></input>
+        <label for="closeIcon" class="menu-btn">
           <i class="fas fa-bars"></i>
         </label>
-				<ul>
+				<ul id="responsive-menu">
           <li><a href="#about">about me</a></li>
           <li><a href="#experience">experience</a></li>
           <li><a href="#education">education</a></li>
@@ -34,7 +34,7 @@
 		</header>
 	</div>
 
-	<div class="container main-info-section">
+	<div class="container main-info-section" id="/">
 		<div class="text">
 			<h1>
 				<span>H</span>
@@ -66,7 +66,6 @@
 				<span class="m-left">i</span>
 				<span class="m-left">s</span>
 				<span class="m-left">t</span>
-				<span class="m-left">.</span>
 			</h1>
 			<p>Python / Tensorflow / Keras</p>
 			<a href="#contact" style="top: 80px;">contact me</a>
