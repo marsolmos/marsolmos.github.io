@@ -1,6 +1,20 @@
+// Close responsive hamburger menu when click on menu item
+var menu = document.getElementById('responsive-menu');
+    var closeIcon = document.getElementById("closeIcon");
+
+    menu.addEventListener('click', handleMenuClick);
+
+    function handleMenuClick(event) {
+      if (event.target instanceof HTMLAnchorElement) {
+        closeIcon.checked = false;
+      }
+    }
+
+// Erase unnecessary <a> tags generated in .social-buttons class
 const buttons = document.querySelectorAll(".social-buttons a");
 buttons[0].parentNode.removeChild(buttons[0])
 
+// Add animations on mouse hover to main-info-section <span> contents
 const spans = document.querySelectorAll('h1 span')
 spans.forEach(span => span.addEventListener('mouseover', function(e) {
 	span.classList.add('animated', 'rubberBand')
@@ -9,7 +23,7 @@ spans.forEach(span => span.addEventListener('mouseout', function(e) {
 	span.classList.remove('animated', 'rubberBand')
 }))
 
-
+// Animate skills bar with ScrollMagic
 const pythonBar = document.querySelector('.bar-python')
 const sqlBar = document.querySelector('.bar-sql')
 const tfBar = document.querySelector('.bar-tf')
@@ -33,7 +47,7 @@ const scene = new ScrollMagic.Scene({
 .setTween(t1)
 .addTo(controller)
 
-
+// Filter contents in project categories
 const showRequiredCategory = event => {
 	const getId = event.id
 	const links = document.querySelectorAll('.projects-category button')
@@ -55,3 +69,5 @@ const showRequiredCategory = event => {
 	getCategory.classList.remove('hideCategory')
 	getCategory.classList.add('showCategory')
 }
+
+// end

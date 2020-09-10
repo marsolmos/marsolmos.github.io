@@ -97,8 +97,7 @@ body {
 }
 
 .logo img {
-  width: 250px;
-  /* margin-top: 50px; */
+  width: 200px;
 }
 
 .navbar {
@@ -116,16 +115,19 @@ header {
 	padding: 20px 0;
 }
 
-header h1,
 header a,
-.text p,
+.text p {
+  font-size: 1.1rem;
+  color: #707070;
+}
+
 .about h1,
 .experience h1,
 .education h1,
 .skills h1,
 .projects h1,
 .contact h1 {
-	color: #707070;
+	color: #2C2D2E;
 }
 
 li {
@@ -137,10 +139,10 @@ a {
 	text-decoration: none;
 	font-size: .9rem;
 	text-transform: uppercase;
-	position: relative;
+	/* position: relative; */
 	top: 50%;
 	bottom: 50%;
-	transform: translateY(-50%);
+	/* transform: translateY(-50%); */
 }
 
 nav {
@@ -162,59 +164,13 @@ nav .menu-btn i {
   display: none;
 }
 
-#click {
+#closeIcon {
   display: none;
 }
 
-@media (max-width: 1260px) {
-    .logo h1{
-      font-size: 5vh;
-    }
-
-    nav .menu-btn i {
-      display: block;
-    }
-    #click:checked ~ .menu-btn i:before{
-      content: "\f00d";
-    }
-    nav ul {
-      position: fixed;
-      top: 0%;
-      left: -100%;
-      background: #000;
-      height: 100%;
-      width: 100%;
-      display: block;
-      text-align: center;
-      transition: all 0.6s ease;
-    }
-    #click:checked ~ ul {
-      left: 0%;
-    }
-    nav ul li {
-      margin: 10% 0;
-    }
-    nav ul li a {
-      /* font-size: 2rem; */
-      display: block;
-    }
-    .project-detail h1 {
-      font-size: 14vw;
-    }
-    .project-detail h2 {
-      font-size: 8vw;
-    }
-    .project-detail h3 {
-      font-size: 6vw;
-    }
-    .project-detail p {
-      font-size: 4vw;
-    }
-}
-
-.main-info-section {
+/* .main-info-section {
 	height: calc(100vh - 81.6px);
-}
+} */
 
 .text {
 	margin-top: 120px;
@@ -302,7 +258,6 @@ span.m-left {
 .projects h1 {
 	font-size: 10rem;
 	z-index: 0;
-	opacity: .1;
 }
 
 .about-me-info {
@@ -367,7 +322,6 @@ span.m-left {
 .contact h1 {
 	text-align: right;
 	font-size: 10rem;
-	opacity: .1;
 }
 
 .education h2 {
@@ -422,13 +376,10 @@ span.m-left {
 }
 
 .skills-info {
-	font-size: 1.4 rem;
+	font-size: 1.4rem;
 	color: #BEBEBE;
-	max-width: 800px;
-	position: relative;
 	left: 50%;
 	right: 50%;
-	transform: translateX(-50%);
 	text-align: center;
 	margin-bottom: 50px;
 }
@@ -515,7 +466,7 @@ div[class^='bar-'] {
 .projects-category button {
 	text-transform: capitalize;
 	border: 3px solid #ED5565;
-	padding: 15px 30px;
+	padding: 10px 30px;
 	border-radius: 50px;
 	color: #ED5565;
 	font-size: 1.1rem;
@@ -534,7 +485,7 @@ div[class^='category-'] {
 
 .projects a {
 	justify-self: center;
-	position: relative;
+	/* position: relative; */
 	display:inline-block;
 }
 
@@ -686,4 +637,84 @@ footer p {
 	color: #707070;
 	font-size: 1.2rem;
 	padding: 30px 0;
+}
+
+@media (max-width: 1260px) {
+    .logo img{
+      width: 25vw;
+    }
+
+    nav .menu-btn i {
+      display: block;
+    }
+    #closeIcon:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul {
+      position: fixed;
+      top: 0%;
+      left: -100%;
+      background: #000;
+      height: 100%;
+      width: 100%;
+      display: block;
+      text-align: center;
+      transition: all 0.6s ease;
+    }
+    #closeIcon:checked ~ ul {
+      left: 0%;
+    }
+    nav ul li {
+      margin: 10% 0;
+    }
+    nav ul li a {
+      /* font-size: 2rem; */
+      display: block;
+    }
+
+    .about h1,
+    .experience h1,
+    .education h1,
+    .skills h1,
+    .projects h1,
+    .contact h1 {
+      font-size: 11vw;
+    }
+
+    .text {
+      margin-top: 1vh;
+    }
+
+    .text h1 {
+    	font-size: 2.5rem;
+    }
+
+    .profile-image img {
+    width: 80vw;
+    margin-top: 11vh;
+    }
+
+    .logo-image {
+    	width: 20vw;
+    	margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+
+    .projects a img {
+    	width: 35vw;
+    	justify-self: center;
+    }
+
+    .project-detail h1 {
+      font-size: 14vw;
+    }
+    .project-detail h2 {
+      font-size: 8vw;
+    }
+    .project-detail h3 {
+      font-size: 6vw;
+    }
+    .project-detail p {
+      font-size: 4vw;
+    }
 }
