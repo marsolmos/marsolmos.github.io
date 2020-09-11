@@ -97,7 +97,7 @@ body {
 }
 
 .logo img {
-  width: 200px;
+  height: 120px;
 }
 
 .navbar {
@@ -141,15 +141,15 @@ a {
 	font-size: .9rem;
 	text-transform: uppercase;
 	/* position: relative; */
-	top: 50%;
-	bottom: 50%;
+	/* top: 50%; */
+	/* bottom: 50%; */
 	/* transform: translateY(-50%); */
 }
 
 nav {
   height: 40px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -170,7 +170,7 @@ nav .menu-btn i {
 }
 
 .main-info-section {
-	padding-top: 10vh;
+	padding-top: 15vh;
 }
 
 .text {
@@ -648,7 +648,7 @@ footer p {
     /* Behavior in mobile devices */
     /* navbar */
     .logo img{
-      width: 25vw;
+      height: 10vh;
     }
     nav .menu-btn i {
       display: block;
