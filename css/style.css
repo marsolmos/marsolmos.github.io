@@ -13,7 +13,7 @@ html, body {
 
 .container {
 	padding: 0 10% 0 10%;
-  padding-top: 20vh;
+  padding-top: max(10vh,20vw);
 }
 
 .container-experience {
@@ -169,9 +169,9 @@ nav .menu-btn i {
   display: none;
 }
 
-/* .main-info-section {
-	height: calc(100vh - 81.6px);
-} */
+.main-info-section {
+	padding-top: 10vh;
+}
 
 .text {
 	margin-top: 120px;
@@ -261,16 +261,16 @@ span.m-left {
 }
 
 .about-me-info {
-	max-width: 900px;
-	background-color: #252627;
-	box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
-	padding: 50px;
-	position: relative;
-	top: -70px;
-	left:50%;
-	right:50%;
-	transform: translateX(-50%);
-	z-index: 1;
+  max-width: 900px;
+  background-color: #252627;
+  box-shadow: 0 0 1.2rem rgba(0,0,0,.75);
+  padding: 5vh;
+  position: relative;
+  top: -2vh;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .about-me-info p {
@@ -284,12 +284,12 @@ span.m-left {
 }
 
 .about img {
-	width: 300px;
-	position: relative;
-	top: -300px;
-	left: calc(100% - 100px);
-	right: calc(100% - 100px);
-	transform: translateX(calc(-100% + 100px));
+  width: 25vh;
+  position: relative;
+  top: -10vh;
+  left: calc(100% - 100px);
+  right: calc(100% - 100px);
+  transform: translateX(calc(-100% + 150px));
 }
 
 .experience h2 {
@@ -305,6 +305,11 @@ span.m-left {
   color: #80B5A8;
   margin: 0 0 20px;
   width: 100%;
+}
+
+.right-container-experience h2,
+.right-container-experience h3 {
+  text-align: center;
 }
 
 .experience p{
@@ -709,17 +714,44 @@ footer p {
     	margin-top: 2vh;
       margin-bottom: 2vh;
     }
+    .container-experience {
+        flex-wrap: wrap;
+    }
+    .left-container {
+        flex: 0 1 100%;
+        min-height: 100%;
+        max-width: 100%;
+        border-width: none;
+        border-style: none;
+        border-color: none;
+        padding: .5em;
+    }
+    .right-container {
+        flex: 0 1 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+
+    .right-container-experience h2,
+    .right-container-experience h3 {
+      text-align: left;
+    }
 
     /* education */
     #studies-list li {
       font-size: 4vw;
     }
     #studies-skill-list li {
-      font-size: 3vw;
+      font-size: max(3vw, 16px);
     }
     #training-list li,
     .education a {
       font-size: 4vw;
+    }
+
+    /* skills */
+    .container-skills {
+      flex-wrap: wrap;
     }
 
     /* projects */
