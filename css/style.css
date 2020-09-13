@@ -13,7 +13,7 @@ html, body {
 
 .container {
 	padding: 0 10% 0 10%;
-  padding-top: max(10vh,20vw);
+  padding-bottom: 13vh;
 }
 
 .container-experience {
@@ -45,7 +45,7 @@ html, body {
 }
 
 .left-container-checkbox {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     border-color: transparent;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ html, body {
     max-width: 50%;
     flex-wrap: wrap;
     margin-left: 40px;
-    /* align-items: center; */
+    align-items: center;
     /* justify-content: center; */
 }
 
@@ -69,7 +69,7 @@ html, body {
 }
 
 .right-container-checkbox {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     align-items: center;
     justify-content: center;
 }
@@ -174,6 +174,7 @@ nav .menu-btn i {
 
 .main-info-section {
 	padding-top: 15vh;
+  padding-bottom: 10vh;
 }
 
 .text {
@@ -292,7 +293,7 @@ span.m-left {
   top: -10vh;
   left: calc(100% - 100px);
   right: calc(100% - 100px);
-  transform: translateX(calc(-100% + 150px));
+  transform: translateX(calc(-100% + min(30vw,12vh)));
 }
 
 .experience h2 {
@@ -451,6 +452,7 @@ div[class^='bar-'] {
   position: relative;
   padding-left: 1.95em;
   cursor: pointer;
+  font-size: 2vh;
   z-index: +1;
 }
 
@@ -475,6 +477,8 @@ div[class^='bar-'] {
 	text-transform: capitalize;
 	border: 3px solid #ED5565;
 	padding: 10px 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 	border-radius: 50px;
 	color: #ED5565;
 	font-size: 1.1rem;
@@ -519,7 +523,7 @@ showCategory {
 }
 
 .contact {
-	margin-top: 50px;
+  padding-bottom: 0vh;
 }
 
 .container-social-buttons div{
@@ -605,6 +609,10 @@ showCategory {
   opacity: 1;
 }
 
+.project-detail {
+  padding-top: 13vh;
+}
+
 .project-detail h1 {
 	font-size: 11vw;
 	z-index: 0;
@@ -627,7 +635,7 @@ showCategory {
 }
 
 .project-detail p {
-	font-size: 2vw;
+	font-size: 1.7rem;
 	z-index: 0;
   color: #BEBEBE;
   margin-top: 2%;
@@ -637,7 +645,7 @@ showCategory {
 
 footer hr {
 	border: 2px solid #707070;
-	margin-top: 80px;
+  margin-top: 2vh;
 }
 
 footer p {
@@ -662,7 +670,7 @@ footer p {
     nav ul {
       position: fixed;
       top: 0%;
-      left: -100%;
+      left: 100%;
       background: #000;
       height: 100%;
       width: 100%;
@@ -692,11 +700,11 @@ footer p {
     }
     .experience h2,
     .education h2 {
-      font-size: 8vw;
+      font-size: 6.5vw;
     }
     .experience h3,
     .education h3 {
-      font-size: 6vw;
+      font-size: 4vw;
     }
 
     /* main-info-section */
@@ -706,19 +714,33 @@ footer p {
     .text h1 {
     	font-size: 2.5rem;
     }
+    .text p {
+      font-size: max(3vw, 16px);
+    }
     .profile-image img {
     width: 80vw;
     margin-top: 11vh;
     }
 
+    /* about me */
+    .about-me-info p {
+      font-size: max(3vw, 16px);
+    }
+
     /* experience */
     .logo-image {
-    	width: 20vw;
+    	width: 50vw;
     	margin-top: 2vh;
       margin-bottom: 2vh;
     }
     .container-experience {
         flex-wrap: wrap;
+        justify-content: center;
+        text-align: justify;
+    }
+    .container-experience p {
+      margin-right: none;
+      font-size: max(3vw, 16px);
     }
     .left-container {
         flex: 0 1 100%;
@@ -727,7 +749,7 @@ footer p {
         border-width: none;
         border-style: none;
         border-color: none;
-        padding: .5em;
+        padding: 0;
     }
     .right-container {
         flex: 0 1 100%;
@@ -737,7 +759,7 @@ footer p {
 
     .right-container-experience h2,
     .right-container-experience h3 {
-      text-align: left;
+      text-align: justify;
     }
 
     /* education */
@@ -749,7 +771,7 @@ footer p {
     }
     #training-list li,
     .education a {
-      font-size: 4vw;
+      font-size: max(3vw, 16px);
     }
 
     /* skills */
