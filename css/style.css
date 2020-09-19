@@ -45,7 +45,7 @@ html, body {
 }
 
 .left-container-checkbox {
-    /* margin-left: 40px; */
+    margin-top: 20px;
     border-color: transparent;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ html, body {
     max-width: 50%;
     flex-wrap: wrap;
     margin-left: 40px;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: center; */
 }
 
@@ -69,7 +69,7 @@ html, body {
 }
 
 .right-container-checkbox {
-    /* margin-left: 40px; */
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
 }
@@ -512,6 +512,7 @@ button.active {
 .projects a img {
 	width: 350px;
 	justify-self: center;
+  border-radius: 10px;
 }
 
 div.hideCategory {
@@ -614,7 +615,7 @@ showCategory {
 }
 
 .project-detail h1 {
-	font-size: 11vw;
+	font-size: 7vw;
 	z-index: 0;
   background: linear-gradient(45deg, #30336b 0%, #ED5565 100%);
   -webkit-background-clip: text;
@@ -628,7 +629,7 @@ showCategory {
 }
 
 .project-detail h3 {
-	font-size: 3vw;
+	font-size: 2vw;
 	z-index: 0;
   color: #BEBEBE;
   margin-top: 5%;

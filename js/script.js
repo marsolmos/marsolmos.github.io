@@ -46,10 +46,10 @@ const webdesignBar = document.querySelector('.bar-web-design')
 var t1 = new TimelineLite()
 
 t1.fromTo(pythonBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
-	.fromTo(sqlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
-	.fromTo(tfBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(95% - 6px)', ease: Power4.easeOut})
-	.fromTo(kerasBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(75% - 6px)', ease: Power4.easeOut})
-	.fromTo(webdesignBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
+	.fromTo(sqlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(75% - 6px)', ease: Power4.easeOut})
+	.fromTo(tfBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
+	.fromTo(kerasBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
+	.fromTo(webdesignBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(55% - 6px)', ease: Power4.easeOut})
 
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
