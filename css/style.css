@@ -614,6 +614,12 @@ showCategory {
   padding-top: 13vh;
 }
 
+.project-detail-social-buttons {
+  padding-top: 3vh;
+  padding-bottom: 5vh;
+  padding-left: 0px;
+}
+
 .project-detail h1 {
 	font-size: 7vw;
 	z-index: 0;
@@ -632,7 +638,6 @@ showCategory {
 	font-size: 2vw;
 	z-index: 0;
   color: #BEBEBE;
-  margin-top: 5%;
 }
 
 .project-detail p {
