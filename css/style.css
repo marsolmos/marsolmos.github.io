@@ -536,6 +536,19 @@ showCategory {
   text-decoration: none;
 }
 
+
+.social-buttons div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 7vw;
+}
+
+.social-buttons div a,
+.social-buttons div p{
+  width:100%;
+}
+
 .social-buttons a{
   display: inline-flex;
   text-decoration: none;
@@ -638,6 +651,7 @@ showCategory {
 	font-size: 2vw;
 	z-index: 0;
   color: #BEBEBE;
+  margin-top: 7vh;
 }
 
 .project-detail p {
@@ -647,6 +661,24 @@ showCategory {
   margin-top: 2%;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.project-detail p a {
+  border-bottom: 1px dotted #fff;
+  color: #BEBEBE;
+  font-size: 1.7rem;
+  text-transform: none;
+}
+
+#project-detail-list li {
+  color: #BEBEBE;
+  font-size: 1.5rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-left: 10%;
+  display: list-item;
+  list-style-type: circle;
+  text-align: -webkit-match-parent;
 }
 
 footer hr {
@@ -817,5 +849,8 @@ footer p {
     }
     .project-detail p {
       font-size: 4vw;
+    }
+    #project-detail-list li {
+      font-size: max(3vw, 16px);
     }
 }

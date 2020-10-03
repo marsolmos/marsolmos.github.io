@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../img/favicon/site.webmanifest">
+    <link href="../../css/prism.css" rel="stylesheet" />
     <title>Mariano Sanchez Portfolio</title>
   </head>
 
@@ -45,12 +46,169 @@
         <div class="container project-detail-social-buttons">
           <h3>More info:</h3>
           <br>
-          <div class="social-buttons">
+          <div class="social-buttons" style="display: flex; flex-direction: row;">
             <a></a>
-            <a href="https://gpt2-text-generator-app-hwe7ciavyq-ew.a.run.app/"><i class="fas fa-link"></i></a>
+            <div>
+              <a href="https://gpt2-text-generator-app-hwe7ciavyq-ew.a.run.app/"><i class="fas fa-link"></i></a>
+              <p>Try it</p>
+            </div>
           </div>
         </div>
-        <h3>(Project in progress)</h3>
+        <p>
+          The objective of this project is to implement a very basic front-end
+          in Google Cloud with which to interact with the Open-AI NLP model,
+          GPT-2. To deploy the model quickly and efficiently in GCP, a Docker
+          container deployed in Google Cloud Run will be used.
+        </p>
+        <h3>How to implement GPT-2?</h3>
+        <p>
+          To implement this model, we will use a pre-trained version of the same
+          present in the popular NLP library
+          <a href="https://github.com/huggingface">HuggingFace</a>. However, in
+          HuggingFace we can find multiple versions of the GPT-2 model itself:
+          "gpt2", "gpt2-xl", "distilgpt2", "gpt2-medium", etc.
+        </p>
+        <p>
+          In principle we could use
+          <a href="https://huggingface.co/models?search=GPT2">any of them</a>.
+          However, since GCP proposes a maximum of available memory in the case
+          of using it for free (2 GiB when this project was made), we will opt
+          for the lighter version of all of them:
+          <a href="https://huggingface.co/distilgpt2">distillgpt2</a>.
+        </p>
+        <p>
+          Although this version of GPT2 will not offer such satisfactory
+          results as the full version could generate, it serves us to develop
+          our app and deploy it in GCP. If in the future this memory capacity
+          is extended, it would be quite easy to import a different NLP model
+          and load it again thanks to the next great aspect of this project:
+          Docker containers.
+        </p>
+        <h3>What is a container?</h3>
+        <p>
+          A container is, according to Docker itself:
+        </p>
+        <p>
+          A container is a standard unit of software that packages up code and
+          all its dependencies so the application runs quickly and reliably from
+          one computing environment to another. A Docker container image is a
+          lightweight, standalone, executable package of software that includes
+          everything needed to run an application: code, runtime, system tools,
+          system libraries and settings.
+        </p>
+        <p>
+          That is why, thanks to the containers, we can easily abstract our
+          code between different operating systems. In a fast and simple way.
+          All the necessary information to execute our code is inside the
+          container itself, so we only need a programming environment capable
+          of deploying containers. And this is where Google Cloud Run comes in.
+        </p>
+        <h3>Cloud Run</h3>
+        <p>
+          Cloud Run is a Google Cloud tool that allows us to quickly and easily
+          deploy our containerized projects. With a couple of simple steps, we
+          can create our Cloud Run service, configure it according to our needs
+          and deploy a container stored in Google Cloud through Container
+          Registry.
+        </p>
+        <h3>Code</h3>
+        <p>
+          The code for this app is quite simple (see on Github). It has a
+          Dockerfile needed to create the Docker image that we will later
+          display in Cloud Run, a get_model.py file with which we will download
+          the HuggingFace NLP model that we will use and our app itself.
+        </p>
+        <p>
+          The app is basically a Flask application (<i>app.py</i>), in which we
+          will have different callbacks with which we will render our front-end
+          (based on HTML, CSS and JS) and with which we will call our text
+          prediction function: <i>generate.py</i>
+        </p>
+        <p>
+          It is in <i>generate.py</i> where we will load the tokenizer and the
+          NLP model downloaded from <i>distilgpt2</i>, and we will pass to both
+          of them the input that the user enters in the text box that he will
+          find in the HTML front-end in the form of a python function that we
+          will call <i>generate()</i>. The result of this function will be the
+          prediction given by the model for this input, and it will be returned
+          to the front-end through the <i>main.js</i> script.
+        </p>
+        <h3>Deploying in Cloud Run</h3>
+        <p>
+          Once we have downloaded the model locally by running the get_model.py
+          script in a terminal, and we have checked in our localhost (in this
+          case, through port 8080) that the app works correctly, it's time to
+          generate our container and upload it to Google Cloud Registry.
+        </p>
+        <p>
+          To do this, it is essential to first have a GCP account with a
+          project created in it and the Cloud Registry and Cloud Run services
+          enabled for it. An easy and simple way to upload this container to the
+          Cloud Registry is through the command line once we have correctly
+          installed Google Cloud SDK on our computer (more info on
+          <a href="https://cloud.google.com/sdk/docs/quickstart">how to do it here</a>).
+        </p>
+        <p>
+          So, to generate the container and upload it to GCR we will only have
+          to execute the following commands in our terminal
+        </p>
+        <pre><code class="language-docker">
+          # Build docker container
+          docker build --tag container-tag-name:latest .
+
+          # Check in 8080 port that everything is working
+          docker run --env=.env -p 8080:8080 container-tag-name
+
+          # Push container to Google Cloud Registry
+          docker tag container-tag-name:latest eu.gcr.io/container-tag-name/container-tag-name:latest
+          docker push eu.gcr.io/container-tag-name/container-tag-name:latest
+        </code></pre>
+        <p>
+          Once the container is completely uploaded to GCR, we simply have to
+          create a new Cloud Run service in our project, specifying what we
+          want to use:
+        </p>
+        <ul id="project-detail-list">
+          <li>2 CPU</li>
+          <li>2 GiB allocated memory</li>
+          <li>Allow unauthenticated invocations</li>
+        </ul>
+        <p>
+          In our project control panel, we can see the progress of the
+          deployment of our container. Once it has been completed, we can see
+          in the upper right a URL where the container has been deployed. If
+          we click on it, we will be redirected to a new page where our app
+          should load normally. However, when we try to write text so that it
+          returns predictions it will not do anything and will remain static.
+        </p>
+        <p>
+          This is due to the HOST configuration in the app. To correct it, we
+          will have to copy the address of the app itself
+          (i.e. <i>https://gpt2-text-generator-app-hwe7ciavyq-ew.a.run.app/</i>)
+          and create a new <i>HOST</i> variable in the Cloud Run service. To do
+          this, we will return to the main panel and click on the edit service
+          option. Once there, we will click on
+          <i>Variables - Create new variable</i>. The name that we will assign
+          to it will be <i>HOST</i> and the value of it will be the one of
+          the URL of the app itself that we had copied previously (including
+          <i>"https://"</i>). After this, we will save our changes and the app
+          will be displayed again allowing, this time, the prediction function
+          to work properly.
+        </p>
+        <h3>Further Work</h3>
+        <p>
+          This project is especially versatile and interesting in that it
+          allows. On the one hand, recycle much of its code to create other
+          front-ends and containerize them to deploy apps with ML in the Google
+          Cloud itself quickly and easily, allowing to focus on improving the
+          model itself, and not on its deployment.
+        </p>
+        <p>
+          On the other hand, this project allows even multiple improvements,
+          such as implementing more accurate NLP models than distilgpt2, or
+          allowing the app to recognize multiple languages, since right now it
+          only predicts in English.
+        </p>
     </div>
   </body>
 
@@ -68,5 +226,6 @@
     <script src="../../js/TweenMax.min.js"></script>
     <script src="../../js/CSSPlugin.min.js"></script>
     <script src="../../js/script.js"></script>
+    <script src="../../js/prism.js"></script>
   </body>
 </html>
