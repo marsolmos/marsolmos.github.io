@@ -52,6 +52,10 @@
               <a href="https://gpt2-text-generator-app-hwe7ciavyq-ew.a.run.app/"><i class="fas fa-link"></i></a>
               <p>Try it</p>
             </div>
+            <div>
+              <a href="https://github.com/marsolmos/gpt2-text-generator"><i class="fab fa-github"></i></a>
+              <p>Source code</p>
+            </div>
           </div>
         </div>
         <p>
@@ -89,12 +93,12 @@
           A container is, according to Docker itself:
         </p>
         <p>
-          A container is a standard unit of software that packages up code and
+          <i>"A container is a standard unit of software that packages up code and
           all its dependencies so the application runs quickly and reliably from
           one computing environment to another. A Docker container image is a
           lightweight, standalone, executable package of software that includes
           everything needed to run an application: code, runtime, system tools,
-          system libraries and settings.
+          system libraries and settings."</i>
         </p>
         <p>
           That is why, thanks to the containers, we can easily abstract our
@@ -113,10 +117,12 @@
         </p>
         <h3>Code</h3>
         <p>
-          The code for this app is quite simple (see on Github). It has a
-          Dockerfile needed to create the Docker image that we will later
-          display in Cloud Run, a get_model.py file with which we will download
-          the HuggingFace NLP model that we will use and our app itself.
+          The code for this app is quite simple (see it on
+          <a href="https://github.com/marsolmos/gpt2-text-generator">Github</a>).
+          It has a Dockerfile needed to create the Docker image that we will
+          later display in Cloud Run, a <i>get_model.py</i> file with which we
+          will download the HuggingFace NLP model that we will use and our app
+          itself.
         </p>
         <p>
           The app is basically a Flask application (<i>app.py</i>), in which we
@@ -164,7 +170,7 @@
           docker push eu.gcr.io/container-tag-name/container-tag-name:latest
         </code></pre>
         <p>
-          Once the container is completely uploaded to GCR, we simply have to
+          Once the container is completely uploaded to GCR, we only have to
           create a new Cloud Run service in our project, specifying what we
           want to use:
         </p>
