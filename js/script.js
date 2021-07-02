@@ -38,7 +38,7 @@ spans.forEach(span => span.addEventListener('mouseout', function(e) {
 
 // Animate skills bar with ScrollMagic
 const pythonBar = document.querySelector('.bar-python')
-const sqlBar = document.querySelector('.bar-sql')
+const mlopsBar = document.querySelector('.bar-mlops')
 const tfBar = document.querySelector('.bar-tf')
 const kerasBar = document.querySelector('.bar-keras')
 const webdesignBar = document.querySelector('.bar-web-design')
@@ -46,9 +46,9 @@ const webdesignBar = document.querySelector('.bar-web-design')
 var t1 = new TimelineLite()
 
 t1.fromTo(pythonBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
-	.fromTo(sqlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(75% - 6px)', ease: Power4.easeOut})
-	.fromTo(tfBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
-	.fromTo(kerasBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
+	.fromTo(mlopsBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(60% - 6px)', ease: Power4.easeOut})
+	.fromTo(tfBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(75% - 6px)', ease: Power4.easeOut})
+	.fromTo(kerasBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(85% - 6px)', ease: Power4.easeOut})
 	.fromTo(webdesignBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(55% - 6px)', ease: Power4.easeOut})
 
 const controller = new ScrollMagic.Controller()
