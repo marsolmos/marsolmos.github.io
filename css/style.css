@@ -7,6 +7,8 @@
   --white: #FFF;
   --light-white: #BEBEBE;
   --background: #252627;
+  --background-tooltip: #464646;
+  --background-title: #2C2D2E;
   --primary: #ED5565;
   --secondary: #48CFAD;
   --tertiary: #1785A7;
@@ -65,7 +67,7 @@ footer p {
 .skills h1,
 .projects h1,
 .contact h1 {
-	color: #2C2D2E;
+	color: var(--background-title);
 }
 
 nav {
@@ -165,7 +167,7 @@ span.m-left {
   bottom: 140%;
   left: 50%;
   margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-  background-color: #464646;
+  background-color: var(--background-tooltip);
   color: var(--primary);
   text-align: center;
   text-transform: lowercase;
@@ -362,7 +364,7 @@ span.m-left {
 
 .experience h3 {
   font-size: 1rem;
-  color: #80B5A8;
+  color: var(--secondary);
   margin: 0 0 20px;
   width: 100%;
 }
@@ -550,7 +552,7 @@ div[class^='bar-'] {
     left: 0; top: 0;
     transform: scale(1.5);
     line-height: 0.8;
-    border: 2px solid #ccc;
+    border: 2px solid var(--white);
     border-radius: 4px;
     border-color: var(--secondary);
   }
@@ -608,7 +610,7 @@ showCategory {
 .project-detail h1 {
 	font-size: 7vw;
 	z-index: 0;
-  background: linear-gradient(45deg, #30336b 0%, var(--primary) 100%);
+  background: linear-gradient(45deg, var(--light-grey) 0%, var(--primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -705,7 +707,7 @@ showCategory {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg,#30336b,var(--primary));
+  background: linear-gradient(45deg,var(--light-grey),var(--primary));
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s ease-in;
@@ -720,7 +722,7 @@ showCategory {
 }
 
 .social-buttons a:hover i{
-  background: linear-gradient(45deg,#30336b,var(--primary));
+  background: linear-gradient(45deg,var(--light-grey),var(--primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
