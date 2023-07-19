@@ -63,7 +63,7 @@ const scene = new ScrollMagic.Scene({
 // Filter contents in project categories
 const showRequiredCategory = event => {
 	const getId = event.id
-	const links = document.querySelectorAll('.projects-category button')
+	const links = document.querySelectorAll('.main-info-section button')
 	for(i = 0; i < links.length; i++) {
 		if(links[i].hasAttribute('class')) {
 			links[i].classList.remove('active')
