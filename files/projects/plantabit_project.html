@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../img/favicon/site.webmanifest">
+    <link href="../../css/prism.css" rel="stylesheet" />
+    <title>Mariano Sanchez Portfolio</title>
+  </head>
+
+  <body>
+
+    <div class="navbar" id="navbar">
+    	<header>
+        <div class="logo">
+  				<a href="../../index.html#/"><img src="../../img/personal_logo.png"></img></a>
+  			</div>
+
+    		<nav>
+          <input type="checkbox" id="closeIcon"></input>
+          <label for="closeIcon" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+    			<ul id="responsive-menu">
+            <li><a href="../../index.html#about">about me</a></li>
+            <li><a href="../../index.html#experience">experience</a></li>
+            <li><a href="../../index.html#education">education</a></li>
+    				<li><a href="../../index.html#skills">skills</a></li>
+    				<li><a href="../../index.html#projects">my projects</a></li>
+            <li class="resume-link"><a href="../resume.pdf">my resume</a></li>
+    			</ul>
+    		</nav>
+    	</header>
+    </div>
+
+    <div class="container project-detail" id="project_detail">
+      <h1>Planta-Bit</h1>
+        <h2>Plant species detector to remind you when to irrigate your plants</h2>
+        <div class="container project-detail-social-buttons">
+          <h3>More info:</h3>
+          <br>
+          <div class="social-buttons" style="display: flex; flex-direction: row;">
+            <a></a>
+            <div>
+              <a href="https://drive.google.com/file/d/1RbWS844GHINMgq6ik4AVbzKlklrHcf7c/view?usp=sharing"><i class="fas fa-file-word"></i></a>
+              <p>Master Thesis (doc)</p>
+            </div>
+            <div>
+              <a href="https://drive.google.com/file/d/1Et2eZXX3s7SXuASbuQirpn-9YMzdnFD0/view?usp=sharing"><i class="fas fa-file-powerpoint"></i></a>
+              <p>Master Thesis (ppt)</p>
+            </div>
+            <div>
+              <a href="https://github.com/marsolmos/plantabit"><i class="fab fa-github"></i></a>
+              <p>Source code</p>
+            </div>
+          </div>
+        </div>
+        <p>
+          In this project, I developed an image classification model to identify 
+          plant species using a Telegram bot interface as my final Master Thesis project. 
+          Users can send images of plants to the bot, which then classifies the species 
+          and provides relevant information. To enhance the user experience, the bot also 
+          sends reminders to irrigate the plants based on their specific watering needs.
+        </p>
+        <p>
+          The project incorporates robust MLOps features, leveraging the DVC (Data 
+          Version Control) library to manage datasets, model versions, and experiments 
+          efficiently. This ensures reproducibility and scalability, allowing for seamless 
+          updates and improvements to the model. Additionally, automated documentation is 
+          maintained using Sphinx, providing clear and comprehensive project documentation 
+          that is continuously updated as the project evolves.
+        </p>
+        <p>
+          Overall, this project not only demonstrates advanced machine learning and image 
+          classification techniques but also showcases effective MLOps practices and 
+          user-centric design through the integration of automated reminders and 
+          thorough documentation.
+        </p>
+        <h3>[More details coming soon...]</h3>
+    </div>
+  </body>
+
+
+
+  <footer>
+  	<hr>
+  	<p>2024 Copyright. All rights reserved</p>
+  </footer>
+
+
+  <script src="../../js/ScrollMagic.min.js"></script>
+    <script src="../../js/animation.gsap.min.js"></script>
+    <script src="../../js/TimelineLite.min.js"></script>
+    <script src="../../js/TweenMax.min.js"></script>
+    <script src="../../js/CSSPlugin.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/prism.js"></script>
+  </body>
+</html>
