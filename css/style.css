@@ -210,6 +210,25 @@ span.m-left {
 	font-size: .8rem;
 }
 
+h2.experience-title {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between text and icon */
+}
+
+h2.experience-title .company-icon img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+h2.experience-title .company-icon:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
 .resume-link a,
 .text a {
 	padding: 12px 25px;
